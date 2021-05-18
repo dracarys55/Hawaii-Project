@@ -224,17 +224,21 @@ footer section.third div.link ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 footer section.third div.link ul li {
   list-style-type: none;
+  -ms-flex-preferred-size: 100px;
+      flex-basis: 100px;
 }
 
 footer section.third div.link ul li a {
   text-decoration: none;
   color: black;
   margin: 1.5rem;
-  font-size: 2rem;
+  font-size: 200%;
 }
 
 footer section.third div.list2 {
@@ -246,14 +250,39 @@ footer section.third div.list2 {
 
 footer section.third div.list2 a img {
   margin: 1rem;
-  width: 5rem;
-  height: 5rem;
+  width: 60%;
+  height: 60%;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 footer section.third div.list2 a img:hover {
-  width: 8rem;
-  height: 8rem;
+  width: 80%;
+  height: 80%;
+}
+
+@media screen and (max-width: 1188px) {
+  section.cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  footer div.list2 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer div.link ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

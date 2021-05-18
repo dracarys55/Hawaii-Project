@@ -168,13 +168,15 @@ footer{
             ul{
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 li{
                     list-style-type: none;
+                    flex-basis: 100px;
                     a{
                         text-decoration: none;
                         color: black;
                         margin: 1.5rem;
-                        font-size: 2rem;
+                        font-size: 200%;
                     }
                 }
             }
@@ -186,14 +188,14 @@ footer{
             a{
                 img{
                     margin: 1rem;
-                    width: 5rem;
-                    height: 5rem;
+                    width: 60%;
+                    height: 60%;
                     transition: all 0.5s ease;
                     
                 }
                 img:hover{
-                    width: 8rem;
-                    height: 8rem;
+                    width: 80%;
+                    height: 80%;
                 }
             
             
@@ -203,4 +205,27 @@ footer{
 
     }
 
+}
+
+@media screen and  (max-width:1188px) {
+    section.cards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+}
+
+@media screen and  (max-width:400px) {
+    footer{
+        div.list2{
+            flex-wrap: wrap;
+            justify-content: center;
+          
+        }
+        div.link{
+            ul{
+               justify-content: center;
+            }
+        }
+    }
 }
